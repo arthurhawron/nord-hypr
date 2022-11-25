@@ -5,7 +5,7 @@ state=$(cat /sys/class/power_supply/BAT0/status)
 if [ $state == "Discharging" ]
 then	
 	brightnessctl s 10% &
-	hyprctl keyword animations:enabled false &
+	hyprctl keyword animations:enabled true &
 else
 	brightnessctl s 100% &
 	hyprctl keyword animations:enabled true &
