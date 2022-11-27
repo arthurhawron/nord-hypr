@@ -13,9 +13,9 @@ window {
     transparency:                   "real";
     background-color:               @BG;
     text-color:                     @FG;
-    border:                         2px;
+    border:                         0px;
     border-color:                   @BDR;
-    border-radius:                  10px;
+    border-radius:                  0px;
     width:                          350px;
     location:                       center;
     anchor:                         center;

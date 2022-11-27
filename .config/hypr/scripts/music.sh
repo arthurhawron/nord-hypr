@@ -1,4 +1,4 @@
 #/bin/sh
-kitty cmus &
-kitty cava & 
+alacritty -e cmus &
+alacritty -e cava & 
 

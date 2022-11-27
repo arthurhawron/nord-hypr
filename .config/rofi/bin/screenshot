@@ -2,15 +2,13 @@
 rofi_command="rofi -theme $HOME/.config/rofi/config/screenshot.rasi"
 
 time=`date +%Y-%m-%d-%I-%M-%S`
-geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
-dir="/home/arthur/Pictures/Screenshots"
+geometry="1920x1080"
+dir="$HOME/Pictures/Screenshots"
 file="Screenshot_${time}.png"
 
-# Icons
-icon1="$HOME/.config/dunst/icons/collections.svg"
-icon2="$HOME/.config/dunst/icons/timer.svg"
+icon1="$HOME/usr/share/icons/Papirus-Dark/symbolic/actions/edit-copy-symbolic.svg"
+icon2="$HOME/usr/share/icons/Papirus-Dark/symbolic/apps/clock-applet-symbolic.svg"
 
-# Buttons
 layout=`cat $HOME/.config/rofi/config/screenshot.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
 if [[ "$layout" == "TRUE" ]]; then
 	screen=""
@@ -26,7 +24,6 @@ else
 	inten="福 Take in 10s"
 fi
 
-# Notify and view screenshot
 notify_view () {
 	dunstify -u low --replace=699 -i $icon1 "Copied to clipboard."
 	viewnior ${dir}/"$file"
@@ -37,7 +34,6 @@ notify_view () {
 	fi
 }
 
-# countdown
 countdown () {
 	for sec in `seq $1 -1 1`; do
 		dunstify -t 1000 --replace=699 -i $icon2 "Taking shot in : $sec"
@@ -45,23 +41,22 @@ countdown () {
 	done
 }
 
-# take shots
 shotnow () {
-	cd ${dir} && sleep 0.5 && grim $(date +'%s_grim.png') -| wl-copy
+	cd ${dir} && sleep 0.5 && grim $(date +'%s_grim.png') 
 }
 
 shot5 () {
 	countdown '3'
-	sleep 1 && cd ${dir} && grim $(date +'%s_grim.png') -| wl-copy 
+	sleep 1 && cd ${dir} && grim $(date +'%s_grim.png')  
 }
 
 shot10 () {
 	countdown '10'
-	sleep 1 && cd ${dir} && grim $(date +'%s_grim.png') -| wl-copy
+	sleep 1 && cd ${dir} && grim $(date +'%s_grim.png') 
 }
 
 shotwin () {
-	cd ${dir} && grim -g "$(hyprctl activewindow -j | jq '.at,.size ' | jq -r 'join(",")+" "+(input|join("x"))' | sed -ne 's/.*/&"/p' | sed 's/^/"/')" $( date +'%s_grim.png')- | wl-copy
+	cd ${dir} && sleep 2 && grim -g "$(hyprctl activewindow -j | jq '.at,.size ' | jq -r 'join(",")+" "+(input|join("x"))')" $( date +'%s_grim.png')
 }
 
 shotarea () {
