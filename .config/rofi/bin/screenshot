@@ -60,7 +60,7 @@ shotwin () {
 }
 
 shotarea () {
-	cd ${dir} && grim -g "$(slurp)" - | wl-copy
+	cd ${dir} && grim -g "$(slurp)" 
 }
 
 if [[ ! -d "$dir" ]]; then
