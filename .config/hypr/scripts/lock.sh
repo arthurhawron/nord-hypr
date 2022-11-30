@@ -1,0 +1,30 @@
+#!/bin/sh
+swaylock \
+	--screenshots \
+	--clock \
+	--indicator \
+	--font Iosevka Nerd Font \
+	--indicator-radius 100 \
+	--indicator-thickness 7 \
+	--effect-blur 7x5 \
+	--effect-vignette 0.5:0.5 \
+	--ring-color 2e3440 \
+	--key-hl-color bf616a \
+	--line-color 2e3440 \
+	--inside-color 2e3440 \
+	--inside-ver-color a3be8c \
+	--inside-wrong-color bf616a \
+	--ring-color 2e3440\
+	--ring-ver-color a3be8c\
+	--ring-wrong-color bf616a \
+	--separator-color 2e3440 \
+	--inside-clear-color d08770 \
+	--line-clear-color 2e3440 \
+	--ring-clear-color d08770 \
+	--text-clear-color eceff4 \
+	--text-color eceff4 \
+	--text-caps-lock-color bf616a \
+  	--text-ver-color a3be8c \
+  	--text-wrong-color bf616a \
+	--grace 0 \
+	--fade-in 0.2 &
