@@ -16,6 +16,7 @@
   margin: 5px;
   background-color: #2e3440;
   margin-left: 1rem;
+  border: 2px solid rgba(136, 192, 208, 1);
 }
 
 #workspaces button {
@@ -45,16 +46,22 @@
   background-color: #2e3440;
   padding: 0.5rem 1rem;
   margin: 5px 0;
+  
 }
 
 #clock {
   color: #5e81ac;
   border-radius: 0px 0.75rem 0.75rem 0px;
   margin-right: 1rem;
+  border-bottom: 2px solid rgba(136, 192, 208, 1);
+  border-top: 2px solid rgba(136, 192, 208, 1);
+  border-right: 2px solid rgba(136, 192, 208, 1);
 }
 
 #battery {
   color: #81a1c1;
+  border-top: 2px solid rgba(136, 192, 208, 1);
+  border-bottom: 2px solid rgba(136, 192, 208, 1);
 }
 
 #battery.charging {
@@ -67,31 +74,44 @@
 
 #backlight {
   color: #88c0d0;
+  border-top: 2px solid rgba(136, 192, 208, 1);
+  border-bottom: 2px solid rgba(136, 192, 208, 1);
 }
 
 #pulseaudio {
   color: #8fbcbb;
   border-radius: 0.75rem 0px 0px 0.75rem;
   margin-left: 1rem;
+  border-bottom: 2px solid rgba(136, 192, 208, 1);
+  border-top: 2px solid rgba(136, 192, 208, 1);
+  border-left: 2px solid rgba(136, 192, 208, 1);
 }
 
 #custom-music {
   color: #8fbcbb;
   border-radius: 0.75rem;
+  border: 2px solid rgba(136, 192, 208, 1);
 }
 
 #custom-lock {
     border-radius: 0.75rem 0px 0px 0.75rem;
     color: #5e81ac;
+    border-bottom: 2px solid rgba(136, 192, 208, 1);
+    border-top: 2px solid rgba(136, 192, 208, 1);
+    border-left: 2px solid rgba(136, 192, 208, 1);
 }
 
 #custom-power {
     margin-right: 1rem;
     border-radius: 0px 0.75rem 0.75rem 0px;
     color: #bf616a;
+    border-bottom: 2px solid rgba(136, 192, 208, 1);
+    border-top: 2px solid rgba(136, 192, 208, 1);
+    border-right: 2px solid rgba(136, 192, 208, 1);
 }
 
 #tray {
   margin-right: 1rem;
   border-radius: 0.75rem;
+  border: 2px solid rgba(136, 192, 208, 1);
 }

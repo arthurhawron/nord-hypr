@@ -74,7 +74,7 @@
     },
     "custom/power": {
         "tooltip": false,
-        "on-click": "~/.config/rofi/bin/powermenu &",
+        "on-click": "~/.config/rofi/bin/power",
         "format": "襤"
     }
 }
