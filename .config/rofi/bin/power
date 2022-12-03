@@ -48,7 +48,7 @@ case $chosen in
         fi
         ;;
     $lock)
-        sh $HOME/.local/bin/lock
+        ~/.config/hypr/scripts/lock.sh
         ;;
     $suspend)
 		ans=$(rdialog &)
@@ -64,7 +64,7 @@ case $chosen in
     $logout)
 		ans=$(rdialog &)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			hyprctl dispatch exit
+			hyprctl dispatch exit true
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 			exit
         else
